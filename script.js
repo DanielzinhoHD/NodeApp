@@ -1,25 +1,34 @@
 const btnAdd = document.querySelector(".btn-add");
 let text = [];
-const data = JSON.parse(localStorage.getItem("notes"));
+let data = JSON.parse(localStorage.getItem("notes"));
 
+if(!data){
+    addNote('Example note', true, true, false);
+    const textarea = document.querySelector("textarea");
+    text.push(textarea.value);
+    localStorage.setItem("notes", JSON.stringify(data));
+}
 
+console.log(data);
 
 function saveLS(content){
     const textarea = content.querySelector("textarea");
-    data.push(textarea.value);
-    localStorage.setItem("notes", JSON.stringify(data));
+    text.push(textarea.value);
+    localStorage.setItem("notes", JSON.stringify(text));
 }
 
 function removeFromLS(content){
     const textarea = content.querySelector("textarea"); 
-    const index = data.indexOf(textarea.value);
-    data.splice(index, 1);
-    localStorage.setItem("notes", JSON.stringify(data));
+    const index = text.indexOf(textarea.value);
+    text.splice(index, 1);
+    localStorage.setItem("notes", JSON.stringify(text));
 }
 
 if(data){
+    
     data.forEach((txt) => {
         addNote(txt, true, true, false)
+        text.push(txt)
     })
 }
 
