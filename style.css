@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    height: 96vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-attachment: fixed;
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-container{
+    width: 100px;
+    background-color: #30336b;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-add{
+    color: white;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.btn-add:hover{
+    color: #ffbe76;
+}
+
+.main-container{
+    margin: 1.5rem;
+    width: 300px;
+}
+
+.tab-container{
+    background-color: #30336b;
+    width: 100px;
+}
+
+.tab-container{
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tab-container ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-container li{
+    padding: 2px 5px;
+}
+
+.main-container ul li button{
+    border: none;
+    background-color: transparent;
+    font-size: large;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.unclicked{
+    color: #686de0;
+}
+
+.clicked{
+    color: #badc58;
+}
+
+.tab-container ul li:last-child{
+    margin-left: auto;
+}
+
+.edit:hover{
+    color: #badc58;
+}
+
+.close:hover{
+    color: #eb4d4b;
+}
+
+.square{
+    width: 100%;
+    height: 300px;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+}
+
+.writing{
+    background-color: #686de0;
+}
+
+.not-writing{
+    background-color: #4834d4;
+}
+
+.square textarea{
+    color: white;
+    margin-left: 5px;
+    padding: 0px;
+    border: 0;
+    width: 295px;
+    height: 95%;
+    resize: none;
+    outline: none;
+    background-color: transparent;
+}
+
+::placeholder{
+    color: #ffbe76;
+}
+
+.square textarea::-webkit-scrollbar{
+    background-color: transparent;
+    cursor: default;
+}
+
+.square textarea::-webkit-scrollbar-thumb{
+
+    background-color: #c7ecee;
+    border-radius: 1rem;
+}
